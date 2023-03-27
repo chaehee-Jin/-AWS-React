@@ -137,8 +137,18 @@ const Todo = () => {
             ...input,
             id:todoId.current++
         }
-        setTodoList([...todoList, todo])
+        setTodoList([...todoList, todo]);
+        setInput({...input, content: ''});
 
+    }
+
+    const onRemove = (id) => {
+        setTodoList(todoList.filter(
+            todo => {
+                return todo.id !== id;
+
+            }
+        ))
     }
 
   
@@ -147,7 +157,7 @@ const Todo = () => {
     return (
         <div css={TodoContainer}>
             <div css={TodoAddition}>
-                <input css={AdditionInput} type='text' placeholder="Add your new Todo" onChange={onChange} onKeyUp={onKeyUp}/>
+                <input css={AdditionInput} type='text' placeholder="Add your new Todo" onChange={onChange} onKeyUp={onKeyUp} defaultValue={input.content}/>
                 <button css={TodoAddButton} conClick={onClick}><FcPlus/></button>
                 
             </div>
@@ -158,7 +168,7 @@ const Todo = () => {
                     <div css={TodoContent}>{todo.content}</div>
                     <div css={ItemGroup}>
                         <button css={ItemButton} ><BiPen/></button>
-                        <button css={ItemButton}><TiTrash/></button>
+                        <button css={ItemButton} onClick={() => onRemove(todo.id)}><TiTrash/></button>
                     </div>
                 </div>   
                     );
