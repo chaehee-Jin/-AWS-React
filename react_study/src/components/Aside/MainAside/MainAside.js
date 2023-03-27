@@ -9,7 +9,7 @@ import { BsCardChecklist } from 'react-icons/bs';
 import { BiListCheck } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-
+import { FcTodoList } from 'react-icons/fc';
 
 
 const MainAside = () => {
@@ -62,7 +62,21 @@ const MainAside = () => {
                         elemBefore: () => < FaUsers/>
                     }
                 ]
+            },
+            {
+                title:"Todo",
+                itemId:'/Todo',
+                elemBefore: () => <FcTodoList/>,
+                subNav:[
+                    {
+                        title:'todoList',
+                        itemId:'todolist',
+                        elemBefore: () => < FaUsers/>
+
+                    }
+                ]
             }
+
               
             ]}
           />     

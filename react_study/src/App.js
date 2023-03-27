@@ -4,6 +4,7 @@ import { Global } from '@emotion/react';
 import { Route, Routes } from 'react-router-dom';
 import MainAside from './components/Aside/MainAside/MainAside';
 import InputSample from './pages/InputSample/InputSample';
+import Todo from './pages/todo/Todo';
 import UserList from './pages/UserList/UserList';
 import { reset } from './styles/Golbal/reset';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/t2" Component={Test2}/>
         <Route path="/sample/input/1" Component={InputSample}/>
         <Route path="/users" Component={UserList}/>
+        <Route path="/Todo" Component={Todo}/>
       </Routes>
     </>
   );
