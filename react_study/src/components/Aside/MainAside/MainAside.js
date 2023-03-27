@@ -7,14 +7,20 @@ import { GrTest } from 'react-icons/gr';
 import { HiHome } from 'react-icons/hi';
 import { BsCardChecklist } from 'react-icons/bs';
 import { BiListCheck } from 'react-icons/bi';
+import { FaUsers } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 
-const MainAside = ( {children}) => {
+
+const MainAside = () => {
+    const navigate = useNavigate();   
+
     return(
         <aside css={S.style}>
-        <Navigation
-        activeItemId="/"
-        onSelect={({itemId}) => {
+            <Navigation
+            activeItemId="/"
+            onSelect={({ itemId }) => {
+                navigate(itemId);
               
         }}
         items={[
@@ -35,13 +41,25 @@ const MainAside = ( {children}) => {
             },
             {
                 title:"Sample",
-                itemId:'/sample',
+                itemId:'/sample/input/1',
                 elemBefore: () => <BsCardChecklist/>,
                 subNav:[
                     {
                         title: 'input1',
-                        itemId:'/smaple/input/1',
+                        itemId:'/sample/input/1',
                         elemBefore: () => < BiListCheck/>
+                    }
+                ]
+            },
+            {
+                title:"List",
+                itemId:'/users',
+                elemBefore: () => <BsCardChecklist/>,
+                subNav:[
+                    {
+                        title: '사용자 전체 조회',
+                        itemId:'/users',
+                        elemBefore: () => < FaUsers/>
                     }
                 ]
             }

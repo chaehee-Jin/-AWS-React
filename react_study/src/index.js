@@ -7,6 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //원래는 변수값이 변하면 해당 객체를 들고와서 .render을 해서 inner html을 해주어야한다
+  // root.render을 들고와서 처음부터 끝까지 렌더링해주어야한다
+  
   <React.StrictMode>
     <BrowserRouter>
       <App />
