@@ -157,7 +157,7 @@ const Todo = () => {
     return (
         <div css={TodoContainer}>
             <div css={TodoAddition}>
-                <input css={AdditionInput} type='text' placeholder="Add your new Todo" onChange={onChange} onKeyUp={onKeyUp} defaultValue={input.content}/>
+                <input css={AdditionInput} type='text' placeholder="Add your new Todo" onChange={onChange} onKeyUp={onKeyUp} value={input.content}/>
                 <button css={TodoAddButton} conClick={onClick}><FcPlus/></button>
                 
             </div>
