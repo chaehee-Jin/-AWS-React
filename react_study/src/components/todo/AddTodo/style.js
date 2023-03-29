@@ -20,7 +20,7 @@ export const AdditionInput = css`
     box-sizing: border-box;
     border: none;
     outline: none;
-    border-bottom: 1px solid white;
+    border-bottom: 3px solid white;
     padding: 0px 50px 0px 10px;
     width: 100%;
     height: 100%;
@@ -40,6 +40,7 @@ export const TodoAddButton =css`
     border: none;
     width: 35px;
     height: 35px;
+    font-size: 1.2rem;
     background-color: #ffffff00;
     transition: all 1s ease;
     cursor: pointer;

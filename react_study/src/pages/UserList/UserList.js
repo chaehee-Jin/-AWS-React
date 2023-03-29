@@ -126,40 +126,15 @@ const UserList = () => {
         }));
     }
 
-    // const users = [
-
-    //     {
-    //         id:1,
-    //         username: 'aaa',
-    //         password:'1234',
-    //         name: 'AAA',
-    //         email: 'aaa@naver.com'
-    //     },
-    //     {
-    //         id:2,
-    //         username: 'bbb',
-    //         password:'1234',
-    //         name: 'BBB',
-    //         email: 'bbb@naver.com'
-    //     },
-    //     {
-    //         id:3,
-    //         username: 'ccc',
-    //         password:'1234',
-    //         name: 'CCC',
-    //         email: 'ccc@naver.com'
-    //     }
-    // ]
-   
 
     return (
         // userlist를 들고올경우 div라는 한 덩어리가 들고와진다, 한 페이지형식으로 들고올경우 재사용되는 것이 아니면 component로 나눌필요가 없다
         <div css={S.Container}>
             <div>
-                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='username' name='username'  ref={inputRefs[0]} />
-                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='password' name='password'  ref={inputRefs[1]}/>
-                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='name' name='name' ref={inputRefs[2]}/>
-                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='email' name='email' ref={inputRefs[3]}/>
+                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='username' name='username'  ref={inputRefs[0]} defaultValue={inputs.username}/>
+                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='password' name='password'  ref={inputRefs[1]} defaultValue={inputs.password}/>
+                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='name' name='name' ref={inputRefs[2]} defaultValue={inputs.name}/>
+                <input type="text"onKeyUp={keyupHandler} onChange={inputHandler} placeholder='email' name='email' ref={inputRefs[3]} defaultValue={inputs.email}/>
                 <button type='button' onClick={addHandler} ref={addButtonRef}>추가</button>
             </div>
             <table css={S.Table}>

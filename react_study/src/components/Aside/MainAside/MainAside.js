@@ -1,15 +1,15 @@
 /**@jsxImportSource @emotion/react */
 import React from "react";
-import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import { Navigation } from 'react-minimal-side-navigation';
-import * as S from "./style"
-import { GrTest } from 'react-icons/gr';
+import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import { HiHome } from 'react-icons/hi';
+import { GrTest } from 'react-icons/gr';
 import { BsCardChecklist } from 'react-icons/bs';
 import { BiListCheck } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
+import * as S from "./style"
 import { useNavigate } from 'react-router-dom';
-import { FcTodoList } from 'react-icons/fc';
+
 
 
 const MainAside = () => {
@@ -66,18 +66,14 @@ const MainAside = () => {
             {
                 title:"Todo",
                 itemId:'/Todo',
-                elemBefore: () => <FcTodoList/>,
-                subNav:[
-                    {
-                        title:'todoList',
-                        itemId:'todolist',
-                        elemBefore: () => < FaUsers/>
-
-                    }
-                ]
-            }
-
-              
+                elemBefore: () => <BsCardChecklist/>,
+            },
+            {
+                title: 'NumberCounter',
+                itemId: '/number/counter',
+                elemBefore: () => <BsCardChecklist />
+              }
+ 
             ]}
           />     
         </aside>

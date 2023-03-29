@@ -9,6 +9,7 @@ export const Container = css`
 
     margin: 50px auto;      
     width: 900px;
+    transition: opacity 4s ease;
 
 
 `;
